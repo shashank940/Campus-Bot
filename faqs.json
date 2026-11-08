@@ -1,0 +1,60 @@
+[
+    {
+        "questions": [
+            "What is CampusBot?",
+            "What does CampusBot do?",
+            "What is this chatbot?"
+        ],
+        "answer": "CampusBot is the virtual assistant of National College, Basavanagudi."
+    },
+    {
+        "questions": [
+            "Which courses are available?",
+            "What courses does the college offer?",
+            "Does National College offer BCA?",
+            "Tell me about college courses"
+        ],
+        "answer": "National College offers BCA, B.Com, BBA, B.Sc and B.Sc Animation."
+    },
+    {
+        "questions": [
+            "How can I get admission?",
+            "What is the admission process?",
+            "How do I join National College?",
+            "Where can I apply for admission?"
+        ],
+        "answer": "Please contact the National College admission office for detailed admission requirements."
+    },
+    {
+        "questions": [
+            "What facilities are available?",
+            "What facilities does the college provide?",
+            "Tell me about college facilities"
+        ],
+        "answer": "Please contact the National College office for verified information about available facilities."
+    },
+    {
+        "questions": [
+            "Tell me about the college",
+            "Where is National College located?",
+            "What is National College?"
+        ],
+        "answer": "National College is an educational institution located in Basavanagudi, Bengaluru."
+    },
+    {
+        "questions": [
+            "where is the college located?",
+            "what is the adress of National college?",
+            "where can I find NCB ?"
+        ],
+        "answer": "National college is located in basavanagudi, Banglore ."
+    },
+    {
+        "questions": [
+            "hi",
+            "hello",
+            "hey"
+        ],
+        "answer": "Hello! Ask me anything about campus life.  :)"
+    }
+]
