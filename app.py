@@ -7,75 +7,52 @@ st.set_page_config(
     page_icon="🎓",
     layout="centered"
 )
-
 st.markdown("""
 <style>
 
-/* Page background */
-.stApp {
-    background-color: #f0f4f8;
+/* Remove person and robot avatars */
+[data-testid="stChatMessageAvatar"] {
+    display: none !important;
 }
 
-/* All headings */
-h1, h2, h3 {
-    color: #123456 !important;
+/* Common chat bubble styling */
+[data-testid="stChatMessage"] {
+    padding: 12px 18px;
+    border-radius: 18px;
+    margin: 12px 0;
+    max-width: 80%;
+    width: fit-content;
 }
 
-/* Normal text */
-.stApp p,
-.stApp label,
-.stMarkdown {
-    color: #263445 !important;
+/* User messages - right side */
+[data-testid="stChatMessage"]:has(
+    [data-testid="chatAvatarIcon-user"]
+) {
+    background-color: #d9fdd3;
+    margin-left: auto;
+    margin-right: 0;
+    color: #111111;
 }
 
-/* Input field */
-.stTextInput input {
-    background-color: #ffffff !important;
-    color: #123456 !important;
-    border: 2px solid #123456 !important;
+/* Bot messages - left side */
+[data-testid="stChatMessage"]:has(
+    [data-testid="chatAvatarIcon-assistant"]
+) {
+    background-color: #eeeeee;
+    margin-right: auto;
+    margin-left: 0;
+    color: #111111;
 }
 
-/* All buttons */
-.stButton > button,
-.stFormSubmitButton > button {
-    background-color: #123456 !important;
-    color: #ffffff !important;
+/* Message text */
+[data-testid="stChatMessage"] p {
+    color: #111111 !important;
+    font-size: 16px;
+}
+
+/* Remove unnecessary message borders */
+[data-testid="stChatMessage"] {
     border: none !important;
-    border-radius: 8px !important;
-    font-weight: bold !important;
-}
-
-/* Button text */
-.stButton > button p,
-.stFormSubmitButton > button p {
-    color: #ffffff !important;
-}
-
-/* Button hover */
-.stButton > button:hover,
-.stFormSubmitButton > button:hover {
-    background-color: #245b89 !important;
-    color: #ffffff !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
-st.markdown("""
-<style>
-
-/* Keep Quick Questions pinned at the top */
-.st-key-quick_questions {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: var(--background-color);
-    padding: 15px 10px;
-    border-bottom: 1px solid #555;
-}
-
-/* Chat messages */
-.stChatMessage {
-    margin-bottom: 10px;
 }
 
 </style>
@@ -108,10 +85,10 @@ def process_question(question):
 
 # Display chat history
 for message in st.session_state["messages"]:
-    with st.chat_message(message["role"]):
-        st.write(message["content"])
-        
-
+    with st.chat_message(message["role"],
+                         avatar=None
+    ):
+        st.markdown(message["content"])
 # Normal chat input
 with st.form("chat_form", clear_on_submit=True):
     question = st.text_input(
