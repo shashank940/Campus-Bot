@@ -106,26 +106,6 @@ def process_question(question):
             "content": answer
         })
 
-
-
-
-
-
-
-# Quick questions
-with st.container(key="quick_questions"):
-
-    st.subheader("Quick Questions")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        if st.button("Available Courses", use_container_width=True):
-            st.session_state["quick_question"] = "Which courses are available?"
-
-    with col2:
-        if st.button("Admission Details", use_container_width=True):
-            st.session_state["quick_question"] = "How can I get admission?"
 # Display chat history
 for message in st.session_state["messages"]:
     with st.chat_message(message["role"]):
