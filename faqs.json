@@ -5,7 +5,7 @@
             "What does CampusBot do?",
             "What is this chatbot?"
         ],
-        "answer": "CampusBot is the virtual assistant of National College, Basavanagudi."
+        "answer": "CampusBot is a simple chatbot for National College, Basavanagudi."
     },
     {
         "questions": [
@@ -36,7 +36,6 @@
     {
         "questions": [
             "Tell me about the college",
-            "Where is National College located?",
             "What is National College?"
         ],
         "answer": "National College is an educational institution located in Basavanagudi, Bengaluru."
