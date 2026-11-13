@@ -56,7 +56,7 @@ def get_answer(question):
         confidence = similarities[0][best_match]
 
         if confidence < 0.25:
-            return "Sorry, I couldn't find an answer. Please contact the college office."
+            return "Sorry, I couldn't find an answer."
 
         return training_answers[best_match]
 
