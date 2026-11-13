@@ -60,6 +60,26 @@ h1, h2, h3 {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Keep Quick Questions pinned at the top */
+.st-key-quick_questions {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--background-color);
+    padding: 15px 10px;
+    border-bottom: 1px solid #555;
+}
+
+/* Chat messages */
+.stChatMessage {
+    margin-bottom: 10px;
+}
+
+</style>
+""", unsafe_allow_html=True)
 # Main heading
 st.title("🎓 Welcome to CampusBot")
 st.subheader("Your Virtual Campus Assistant! 🤖")
@@ -89,27 +109,28 @@ def process_question(question):
 
 
 
+
+
+
+# Quick questions
+with st.container(key="quick_questions"):
+
+    st.subheader("Quick Questions")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        if st.button("Available Courses", use_container_width=True):
+            st.session_state["quick_question"] = "Which courses are available?"
+
+    with col2:
+        if st.button("Admission Details", use_container_width=True):
+            st.session_state["quick_question"] = "How can I get admission?"
 # Display chat history
 for message in st.session_state["messages"]:
     with st.chat_message(message["role"]):
         st.write(message["content"])
-
-
-# Quick questions
-st.write("### Quick Questions")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    if st.button("Available Courses"):
-        process_question("Which courses are available?")
-        st.rerun()
-
-with col2:
-    if st.button("Admission Details"):
-        process_question("How can I get admission?")
-        st.rerun()
-
+        
 
 # Normal chat input
 with st.form("chat_form", clear_on_submit=True):
