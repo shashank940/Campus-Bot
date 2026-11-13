@@ -1,109 +1,148 @@
 import streamlit as st
+import html
 from chatbot import get_answer
 
-# Page configuration
 st.set_page_config(
     page_title="CampusBot",
     page_icon="🎓",
     layout="centered"
 )
+
+# Custom styling
 st.markdown("""
 <style>
+#MainMenu, footer, header {
+    visibility: hidden;
+}
 
-/* Remove person and robot avatars */
+.block-container {
+    max-width: 850px;
+    padding-top: 2rem;
+    padding-bottom: 130px;
+}
+
+/* Hide default avatars */
 [data-testid="stChatMessageAvatar"] {
     display: none !important;
 }
 
-/* Common chat bubble styling */
+/* Hide default chat message backgrounds */
 [data-testid="stChatMessage"] {
-    padding: 12px 18px;
-    border-radius: 18px;
-    margin: 12px 0;
-    max-width: 80%;
-    width: fit-content;
-}
-
-/* User messages - right side */
-[data-testid="stChatMessage"]:has(
-    [data-testid="chatAvatarIcon-user"]
-) {
-    background-color: #d9fdd3;
-    margin-left: auto;
-    margin-right: 0;
-    color: #111111;
-}
-
-/* Bot messages - left side */
-[data-testid="stChatMessage"]:has(
-    [data-testid="chatAvatarIcon-assistant"]
-) {
-    background-color: #eeeeee;
-    margin-right: auto;
-    margin-left: 0;
-    color: #111111;
-}
-
-/* Message text */
-[data-testid="stChatMessage"] p {
-    color: #111111 !important;
-    font-size: 16px;
-}
-
-/* Remove unnecessary message borders */
-[data-testid="stChatMessage"] {
+    background: transparent !important;
     border: none !important;
+    padding: 0 !important;
 }
 
+/* Chat rows */
+.chat-row {
+    display: flex;
+    width: 100%;
+    margin: 14px 0;
+}
+
+.chat-row.user {
+    justify-content: flex-end;
+}
+
+.chat-row.bot {
+    justify-content: flex-start;
+}
+
+/* Message bubbles */
+.chat-bubble {
+    max-width: 78%;
+    padding: 12px 17px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.user .chat-bubble {
+    background: #2563eb;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.bot .chat-bubble {
+    background: #303846;
+    color: white;
+    border-bottom-left-radius: 5px;
+}
+div[data-testid="stButton"] button {
+    border-radius: 20px;
+    background: #303846;
+    color: white;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .block-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 130px;
+    }
+
+    .chat-bubble {
+        max-width: 99%;
+        font-size: 16px;
+    }
+
+    div[data-testid="stButton"] {
+        right: 12px;
+        bottom: 85px;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
-# Main heading
+# Heading
 st.title("🎓 Welcome to CampusBot")
-st.subheader("Your Virtual Campus Assistant! 🤖")
+st.subheader("Your Virtual Campus Assistant!")
 st.write("Ask me anything about your college!")
 
-# Initialize chat history
+# Initialize messages
 if "messages" not in st.session_state:
-    st.session_state["messages"] = []
-
-
-# Function to process questions
-def process_question(question):
-
-    if question.strip():
-        st.session_state["messages"].append({
-            "role": "user",
-            "content": question
-        })
-
-        answer = get_answer(question)
-
-        st.session_state["messages"].append({
-            "role": "assistant",
-            "content": answer
-        })
+    st.session_state.messages = []
 
 # Display chat history
-for message in st.session_state["messages"]:
-    with st.chat_message(message["role"],
-                         avatar=None
-    ):
-        st.markdown(message["content"])
-# Normal chat input
-with st.form("chat_form", clear_on_submit=True):
-    question = st.text_input(
-        "Ask me anything about your campus life!"
-    )
+for message in st.session_state.messages:
 
-    submit = st.form_submit_button("Send")
+    role = message["role"]
+    content = html.escape(message["content"])
 
-    if submit and question.strip():
-        process_question(question)
-        st.rerun()
-# Clear Chat button at bottom-right
-col1, col2 = st.columns([5, 1])
+    if role == "user":
+        st.markdown(
+            f'<div class="chat-row user">'
+            f'<div class="chat-bubble">{content}</div>'
+            f'</div>',
+            unsafe_allow_html=True
+        )
+    else:
+        st.markdown(
+            f'<div class="chat-row bot">'
+            f'<div class="chat-bubble">{content}</div>'
+            f'</div>',
+            unsafe_allow_html=True
+        )
 
-with col2:
-    if st.button("🗑️ Clear Chat"):
-        st.session_state["messages"] = []
-        st.rerun()
+
+
+# input
+question = st.chat_input(
+    "Ask me anything about your campus life!"
+)
+
+if question:
+    st.session_state.messages.append({
+        "role": "user",
+        "content": question
+    })
+
+    answer = get_answer(question)
+
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": answer
+    })
+
+    st.rerun()
