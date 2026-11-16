@@ -103,7 +103,30 @@ st.write("Ask me anything about your college!")
 # Initialize messages
 if "messages" not in st.session_state:
     st.session_state.messages = []
+# Suggested Questions Dropdown
 
+with st.expander("👇 Questions you can ask CampusBot"):
+
+    st.markdown("""
+    **General Questions**
+    - What is CampusBot?
+    - Tell me about National College.
+    - Where is National College located?
+
+    **Courses**
+    - Which courses are available?
+    - Does NCB offer BCA?
+    - Does NCB offer B.Sc Animation?
+
+    **Admissions**
+    - How can I get admission?
+    - What is the admission process?
+
+    **Other Enquiries**
+    - What is the fee structure?
+    - What are the library timings?
+    - When are the examinations?
+    """)
 # Display chat history
 for message in st.session_state.messages:
 
