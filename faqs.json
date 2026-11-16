@@ -2,59 +2,85 @@
     {
         "questions": [
             "What is CampusBot?",
-            "What does CampusBot do?",
-            "What is this chatbot?"
+            "Who are you?",
+            "Tell me about CampusBot",
+            "What can CampusBot do?",
+            "What is the purpose of CampusBot?"
         ],
-        "answer": "CampusBot is a simple chatbot for National College, Basavanagudi."
+        "answer": "CampusBot is the virtual campus assistant of National College, Basavanagudi. It helps students and visitors get information about the college, courses, admissions, contact details and campus facilities."
     },
     {
         "questions": [
-            "Which courses are available?",
-            "What courses does the college offer?",
+            "What is the name of the college?",
+            "Which college does CampusBot represent?",
+            "Tell me the college name",
+            "What does NCB stand for?"
+        ],
+        "answer": "The college name is National College, Basavanagudi (NCB)."
+    },
+    {
+        "questions": [
+            "Where is National College located?",
+            "What is the college address?",
+            "Give me the college location",
+            "How can I reach National College?",
+            "Where is NCB?"
+        ],
+        "answer": "National College is located in Basavanagudi, Bengaluru, Karnataka, India."
+    },
+    {
+        "questions": [
+            "What is the college phone number?",
+            "Give me the college contact number",
+            "How can I call the college?",
+            "What is the National College telephone number?"
+        ],
+        "answer": "The college contact number is +91 80 2667 4441 or (080 26674441)."
+    },
+    {
+        "questions": [
+            "What is the college email address?",
+            "Give me the college email",
+            "How can I email the college?",
+            "What is the official email ID?"
+        ],
+        "answer": "The official college email address is nationalbgudiautonomous@gmail.com."
+    },
+    {
+        "questions": [
+            "What is the college official website?",
+            "Give me the college website",
+            "Where can I visit the official website?",
+            "What is the National College website?"
+        ],
+        "answer": "You can visit the official National College website here: https://ncbgudi.com."
+    },
+    {
+        "questions": [
+            "Which courses are offered?",
+            "What courses are available?",
             "Does National College offer BCA?",
-            "Tell me about college courses"
+            "Tell me about the college courses",
+            "What degree programmes are available?",
+            "List all the courses"
         ],
-        "answer": "National College offers BCA, B.Com, BBA, B.Sc and B.Sc Animation."
+        "answer": "National College, Basavanagudi offers the following courses: BCA, B.Com, BBA, B.Sc and B.Sc Animation."
     },
     {
         "questions": [
-            "How can I get admission?",
-            "What is the admission process?",
-            "How do I join National College?",
-            "Where can I apply for admission?"
+            "What are the college timings?",
+            "When does the college open?",
+            "When does the college close?",
+            "What are the working hours?",
+            "Tell me the college opening and closing time"
         ],
-        "answer": "Please contact the National College admission office for detailed admission requirements."
-    },
-    {
-        "questions": [
-            "What facilities are available?",
-            "What facilities does the college provide?",
-            "Tell me about college facilities"
-        ],
-        "answer": "Please contact the National College office for verified information about available facilities."
-    },
-    {
-        "questions": [
-            "Tell me about the college",
-            "what is ncb",
-            "What is National College?"
-        ],
-        "answer": "National College is an educational institution located in Basavanagudi, Bengaluru."
-    },
-    {
-        "questions": [
-            "where is the college located?",
-            "what is the adress of National college?",
-            "where can I find NCB ?"
-        ],
-        "answer": "National college is located in basavanagudi, Banglore ."
-    },
+        "answer": "The college working hours are 8:30 AM to 5:30 PM."
+    }
     {
         "questions": [
             "hi",
             "hello",
             "hey"
         ],
-        "answer": "Hello! Ask me anything about campus life.  :)"
-    }
+        "answers": "Hello, how can I help you"
 ]
