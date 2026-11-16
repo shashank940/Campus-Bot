@@ -76,12 +76,4 @@
         ],
         "answer": "The college working hours are 8:30 AM to 5:30 PM."
     }
-    {
-        "questions": [
-            "hi",
-            "hello",
-            "hey"
-        ],
-        "answers": "Hello, how can I help you"
-    }
 ]
