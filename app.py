@@ -1,4 +1,4 @@
-import streamlit  as st
+import streamlit as st
 import html
 from chatbot import get_answer
 
@@ -147,9 +147,6 @@ for message in st.session_state.messages:
             f'</div>',
             unsafe_allow_html=True
         )
-
-
-
 # input
 question = st.chat_input(
     "Ask me anything about your campus life!"
