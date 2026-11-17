@@ -1,7 +1,7 @@
 import json
 import os
 from typing import Any
-import genai from Any 
+from genai import Any
 
 from google import genai
 from google.genai import types
