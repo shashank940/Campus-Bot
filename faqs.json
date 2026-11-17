@@ -149,4 +149,12 @@
         "answer": "OTHER DETAILS SECTION: Add verified information about the library, laboratories, sports, events, placements, student services and other campus facilities here."
     
     }
+    {
+        "questions": [
+            "hi",
+            "hello",
+            "hey"
+        ],
+        "answer": "Hello!, How can I help you?"
+    }
 ]
