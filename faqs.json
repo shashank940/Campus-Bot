@@ -6,29 +6,29 @@
             "Who are you?",
             "What is the purpose of this chatbot?",
             "What can you help me with?",
-            "Tell me about CampusBot",
+            "Tell me about CampusBot"
         ],
         "answer": "Hello! I am CampusBot, the virtual campus assistant of NCB. I can help you find information about the college."
     },
     {
-    "category": "Greetings",
-    "questions": [
-        "Hi",
-        "Hello",
-        "Hey",
-        "Hii",
-        "Hiii",
-        "Hey there",
-        "Hello CampusBot",
-        "Hi CampusBot",
-        "Good morning",
-        "Good afternoon",
-        "Good evening",
-        "How are you?",
-        "What's up?"
-    ],
-    "answer": "Hello! 👋 Welcome to CampusBot! I'm your virtual campus assistant for The National College, Basavanagudi. How can I help you today? You can ask me about courses, admissions, college timings, examinations and campus facilities."
-},
+        "category": "Greetings",
+        "questions": [
+            "Hi",
+            "Hello",
+            "Hey",
+            "Hii",
+            "Hiii",
+            "Hey there",
+            "Hello CampusBot",
+            "Hi CampusBot",
+            "Good morning",
+            "Good afternoon",
+            "Good evening",
+            "How are you?",
+            "What's up?"
+        ],
+        "answer": "Hello! 👋 Welcome to CampusBot! I'm your virtual campus assistant for The National College, Basavanagudi. How can I help you today? You can ask me about courses, admissions, college timings, examinations and campus facilities."
+    },
     {
         "category": "College Information",
         "questions": [
@@ -166,6 +166,5 @@
         "category": "Other Campus Details",
         "questions": [],
         "answer": "OTHER DETAILS SECTION: Add verified information about the library, laboratories, sports, events, placements, student services and other campus facilities here."
-    
     }
 ]
