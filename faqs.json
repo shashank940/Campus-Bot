@@ -1,79 +1,152 @@
 [
     {
+        "category": "CampusBot",
         "questions": [
             "What is CampusBot?",
             "Who are you?",
+            "What is the purpose of this chatbot?",
+            "What can you help me with?",
             "Tell me about CampusBot",
-            "What can CampusBot do?",
-            "What is the purpose of CampusBot?"
         ],
-        "answer": "CampusBot is the virtual campus assistant of National College, Basavanagudi. It helps students and visitors get information about the college, courses, admissions, contact details and campus facilities."
+        "answer": "Hello! I am CampusBot, the virtual campus assistant of NCB. I can help you find information about the college."
     },
     {
+        "category": "College Information",
         "questions": [
             "What is the name of the college?",
-            "Which college does CampusBot represent?",
+            "Which college is this?",
+            "What does NCB stand for?",
             "Tell me the college name",
-            "What does NCB stand for?"
+            "Which college does CampusBot represent?"
         ],
-        "answer": "The college name is National College, Basavanagudi (NCB)."
+        "answer": "CampusBot represents The National College, Basavanagudi, Bengaluru, Karnataka."
     },
     {
+        "category": "College Information",
         "questions": [
             "Where is National College located?",
             "What is the college address?",
-            "Give me the college location",
-            "How can I reach National College?",
-            "Where is NCB?"
+            "Where is NCB?",
+            "How can I reach the college?",
+            "Tell me the college location"
         ],
-        "answer": "National College is located in Basavanagudi, Bengaluru, Karnataka, India."
+        "answer": "The National College is located at Pampamahakavi Road, Basavanagudi, Bengaluru, Karnataka - 560004."
     },
     {
+        "category": "College Information",
         "questions": [
-            "What is the college phone number?",
-            "Give me the college contact number",
-            "How can I call the college?",
-            "What is the National College telephone number?"
+            "When was National College established?",
+            "What is the establishment year?",
+            "When was the college founded?",
+            "How old is National College?"
         ],
-        "answer": "The college contact number is +91 80 2667 4441 or (080 26674441)."
+        "answer": "The National College, Basavanagudi was established in 1945."
     },
     {
+        "category": "College Information",
         "questions": [
-            "What is the college email address?",
-            "Give me the college email",
-            "How can I email the college?",
-            "What is the official email ID?"
+            "Is National College autonomous?",
+            "What is the status of the college?",
+            "Is NCB an autonomous college?",
+            "Tell me about the college status"
         ],
-        "answer": "The official college email address is nationalbgudiautonomous@gmail.com."
+        "answer": "Yes. The National College, Basavanagudi is an autonomous college."
     },
     {
+        "category": "College Information",
         "questions": [
-            "What is the college official website?",
-            "Give me the college website",
-            "Where can I visit the official website?",
-            "What is the National College website?"
+            "Which university is the college affiliated with?",
+            "What is the parent university?",
+            "Tell me about the university affiliation",
+            "Which university is NCB under?"
         ],
-        "answer": "You can visit the official National College website here: https://ncbgudi.com."
+        "answer": "The college has been listed under Bengaluru City University in the information discussed for CampusBot. Please confirm the current affiliation with the college administration."
     },
     {
+        "category": "Courses",
         "questions": [
             "Which courses are offered?",
             "What courses are available?",
-            "Does National College offer BCA?",
-            "Tell me about the college courses",
+            "List the courses offered by the college",
             "What degree programmes are available?",
-            "List all the courses"
+            "Tell me about college courses"
         ],
-        "answer": "National College, Basavanagudi offers the following courses: BCA, B.Com, BBA, B.Sc and B.Sc Animation."
+        "answer": "The courses discussed for National College, Basavanagudi include BCA, B.Com, B.Sc, B.A., M.Com, M.Sc and M.A. Please contact the college for the current list of available programmes."
     },
     {
+        "category": "Courses",
+        "questions": [
+            "Does National College offer BCA?",
+            "Is BCA available?",
+            "Can I study BCA at NCB?",
+            "Is there a computer science course?"
+        ],
+        "answer": "BCA is one of the programmes listed for National College, Basavanagudi. Contact the college for current admission details."
+    },
+    {
+        "category": "Contact Information",
+        "questions": [
+            "What is the college phone number?",
+            "Give me the contact number",
+            "How can I call the college?",
+            "What is the telephone number of NCB?"
+        ],
+        "answer": "The college contact number listed in the information available to CampusBot is 080-26674441. Please verify the number before relying on it."
+    },
+    {
+        "category": "Contact Information",
+        "questions": [
+            "What is the college email address?",
+            "Give me the official email",
+            "How can I email the college?",
+            "What is the email ID of NCB?"
+        ],
+        "answer": "The email address listed for the college is info@ncbgudi.com. Please verify it with the college before sending important communication."
+    },
+    {
+        "category": "Contact Information",
+        "questions": [
+            "What is the official college website?",
+            "Give me the college website",
+            "Where can I visit the college website?",
+            "What is the website of NCB?"
+        ],
+        "answer": "You can visit the college website at https://ncbgudi.com/. "
+    },
+    {
+        "category": "College Information",
+        "questions": [
+            "Is National College Basavanagudi the same as National College Jayanagar?",
+            "Are Basavanagudi and Jayanagar the same college?",
+            "Is NCB Jayanagar?",
+            "Which campus does CampusBot represent?"
+        ],
+        "answer": "No. National College, Basavanagudi and National College, Jayanagar are separate institutions. CampusBot is designed specifically for The National College, Basavanagudi."
+    },
+    {
+        "category": "College Timings",
         "questions": [
             "What are the college timings?",
             "When does the college open?",
             "When does the college close?",
-            "What are the working hours?",
-            "Tell me the college opening and closing time"
+            "What are the working hours?"
         ],
-        "answer": "The college working hours are 8:30 AM to 5:30 PM."
+        "answer": "College timings have not yet been confirmed in the CampusBot database. Please contact the college office for the latest working hours."
+    },
+    {
+        "category": "Timetable",
+        "questions": [],
+        "answer": "TIMETABLE SECTION: Add verified class timetables here. Include course, semester, section, day, subject, classroom and timings."
+    },
+    {
+        "category": "Examination Section",
+        "questions": [],
+        "answer": "EXAMINATION SECTION: Add verified examination information here, including exam schedules, hall tickets, results, revaluation procedures and examination office contact details."
+    },
+    {
+        "category": "Other Campus Details",
+        "questions": [],
+        "answer": "OTHER DETAILS SECTION: Add verified information about the library, laboratories, sports, events, placements, student services and other campus facilities here."
+    
     }
 ]
